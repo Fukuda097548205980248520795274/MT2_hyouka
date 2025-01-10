@@ -14,6 +14,12 @@
     <Filter Include="KamataEngine\Adapter">
       <UniqueIdentifier>{c6468eb4-788b-4a83-b207-a5f4804e56c5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Function">
+      <UniqueIdentifier>{05807554-991f-421b-bb3e-14e31fcee2ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Function\Matrix">
+      <UniqueIdentifier>{4d6e919a-937d-4691-b363-d3af9eeee245}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\KamataEngine\DirectXGame\base\DirectXCommon.cpp">
@@ -37,6 +43,9 @@
     </ClCompile>
     <ClCompile Include="C:\KamataEngine\DirectXGame\base\StringUtility.cpp">
       <Filter>KamataEngine\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Function\Matrix\Matrix.cpp">
+      <Filter>Function\Matrix</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -113,5 +122,8 @@
     </ClInclude>
     <ClInclude Include="Constant.h" />
     <ClInclude Include="Structure.h" />
+    <ClInclude Include="Function\Matrix\Matrix.h">
+      <Filter>Function\Matrix</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
