@@ -46,6 +46,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		///
 
 		player->Move(keys, preKeys);
+		player->Shot(keys, preKeys);
 
 		///
 		/// ↑更新処理ここまで
