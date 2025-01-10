@@ -29,6 +29,9 @@
     <Filter Include="Class\Object\Player">
       <UniqueIdentifier>{9a7fea0b-f198-4e60-9bcb-5297aeb0bf21}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Class\Object\Bullet">
+      <UniqueIdentifier>{3d800864-5080-4ced-af6b-bcb5f8ae6e4a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\KamataEngine\DirectXGame\base\DirectXCommon.cpp">
@@ -61,6 +64,9 @@
     </ClCompile>
     <ClCompile Include="Class\Object\Player\Player.cpp">
       <Filter>Class\Object\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\Object\Bullet\Bullet.cpp">
+      <Filter>Class\Object\Bullet</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -145,6 +151,9 @@
     </ClInclude>
     <ClInclude Include="Class\Object\Player\Player.h">
       <Filter>Class\Object\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\Object\Bullet\Bullet.h">
+      <Filter>Class\Object\Bullet</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

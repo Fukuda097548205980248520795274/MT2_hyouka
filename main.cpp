@@ -1,6 +1,15 @@
 #include <Novice.h>
 #include "Constant.h"
 #include "./Class/Object/Player/Player.h"
+#include "./Class/Object/Bullet/Bullet.h"
+
+/*-------------------
+    静的メンバ変数
+-------------------*/
+
+// 弾
+int Bullet::countID;
+
 
 const char kWindowTitle[] = "LC1C_20_フクダソウワ_評価課題";
 
