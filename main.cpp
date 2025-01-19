@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <time.h>
 #include "Constant.h"
-#include "./Class/Object/Player/Player.h"
-#include "./Class/Object/Bullet/Bullet.h"
-#include "./Class/Object/Enemy/Enemy.h"
+#include "./Class/ObjectQuad/Player/Player.h"
+#include "./Class/ObjectEllipse/Bullet/Bullet.h"
+#include "./Class/ObjectEllipse/Enemy/Enemy.h"
 
 const char kWindowTitle[] = "LC1C_20_フクダソウワ_評価課題";
 
@@ -74,7 +74,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				if (enemy[i]->isArrival_ == false)
 				{
 					// クールタイムを開始する
-					Enemy::coolTime = (rand() % 90);
+					Enemy::coolTime = 20 + rand() % 30;
 
 					enemy[i]->Arrival();
 
@@ -89,6 +89,51 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			enemy[i]->Move();
 		}
 
+
+		/*---------------
+		    当たり判定
+		---------------*/
+
+		// 弾（発射フラグがtrue） と 敵（出現フラグがtrue）
+		for (int i = 0; i < kBulletNum; i++)
+		{
+			if (player->bullet[i]->isShot_)
+			{
+				for (int j = 0; j < kEnemyNum; j++)
+				{
+					if (enemy[j]->isArrival_)
+					{
+						// ぶつかったら、敵と弾が消える（発射、出現フラグがfalseになる）
+						if (powf(player->bullet[i]->radius_ + enemy[j]->radius_, 2) >=
+							powf(enemy[j]->translate_.x - player->bullet[i]->translate_.x, 2) +
+							powf(enemy[j]->translate_.y - player->bullet[i]->translate_.y, 2))
+						{
+							player->bullet[i]->isShot_ = false;
+							player->bullet[i]->id_ = 0;
+							Bullet::countID--;
+
+							enemy[j]->isArrival_ = false;
+
+							// スコアに加点する
+							Player::score += 100;
+						}
+					}
+				}
+			}
+		}
+
+		for (int i = 0; i < kEnemyNum; i++)
+		{
+			for (int j = 0; j < kEnemyNum; j++)
+			{
+				if (i != j)
+				{
+					enemy[i]->Hit(enemy[j]);
+				}
+			}
+		}
+
+
 		///
 		/// ↑更新処理ここまで
 		///
@@ -101,6 +146,10 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		    図形を描画する
 		-------------------*/
 
+		// カメラの軸
+		Novice::DrawLine(0, kScreenHeight - kCameraPosY, kScreenWidth, kScreenHeight - kCameraPosY, 0xFF0000FF);
+		Novice::DrawLine(kCameraPosX, 0, kCameraPosX, kScreenHeight, 0x00FF00FF);
+
 		// プレイヤー
 		player->Draw();
 
@@ -109,6 +158,9 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		{
 			enemy[i]->Draw();
 		}
+
+		// スコア
+		Novice::ScreenPrintf(8 , 8 , "Score : %d" , Player::score);
 
 		///
 		/// ↑描画処理ここまで

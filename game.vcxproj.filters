@@ -23,17 +23,26 @@
     <Filter Include="Class">
       <UniqueIdentifier>{e7508423-d65f-4e83-826a-ae8d48465a29}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Class\Object">
+    <Filter Include="Function\Vector">
+      <UniqueIdentifier>{b3b7a750-5358-4f45-8b38-6b2e889e55cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Function\Spline">
+      <UniqueIdentifier>{ac9d8a1c-e126-419b-8a97-f9729da9676c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class\ObjectQuad">
       <UniqueIdentifier>{8314f837-e5ae-4b94-9436-92084f624533}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Class\Object\Player">
+    <Filter Include="Class\ObjectQuad\Player">
       <UniqueIdentifier>{9a7fea0b-f198-4e60-9bcb-5297aeb0bf21}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Class\Object\Bullet">
-      <UniqueIdentifier>{3d800864-5080-4ced-af6b-bcb5f8ae6e4a}</UniqueIdentifier>
+    <Filter Include="Class\ObjectEllipse">
+      <UniqueIdentifier>{fb6e2dc2-63df-4757-a630-98de200b11cd}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Class\Object\Enemy">
+    <Filter Include="Class\ObjectEllipse\Enemy">
       <UniqueIdentifier>{b5b1b215-504d-448e-a332-d92b5e0e99f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class\ObjectEllipse\Bullet">
+      <UniqueIdentifier>{3d800864-5080-4ced-af6b-bcb5f8ae6e4a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -62,17 +71,26 @@
     <ClCompile Include="Function\Matrix\Matrix.cpp">
       <Filter>Function\Matrix</Filter>
     </ClCompile>
-    <ClCompile Include="Class\Object\Object.cpp">
-      <Filter>Class\Object</Filter>
+    <ClCompile Include="Function\Vector\Vector.cpp">
+      <Filter>Function\Vector</Filter>
     </ClCompile>
-    <ClCompile Include="Class\Object\Player\Player.cpp">
-      <Filter>Class\Object\Player</Filter>
+    <ClCompile Include="Function\Spline\Spline.cpp">
+      <Filter>Function\Spline</Filter>
     </ClCompile>
-    <ClCompile Include="Class\Object\Bullet\Bullet.cpp">
-      <Filter>Class\Object\Bullet</Filter>
+    <ClCompile Include="Class\ObjectEllipse\ObjectEllipse.cpp">
+      <Filter>Class\ObjectEllipse</Filter>
     </ClCompile>
-    <ClCompile Include="Class\Object\Enemy\Enemy.cpp">
-      <Filter>Class\Object\Enemy</Filter>
+    <ClCompile Include="Class\ObjectEllipse\Enemy\Enemy.cpp">
+      <Filter>Class\ObjectEllipse\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\ObjectEllipse\Bullet\Bullet.cpp">
+      <Filter>Class\ObjectEllipse\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\ObjectQuad\Player\Player.cpp">
+      <Filter>Class\ObjectQuad\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\ObjectQuad\QuadObject.cpp">
+      <Filter>Class\ObjectQuad</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -152,17 +170,26 @@
     <ClInclude Include="Function\Matrix\Matrix.h">
       <Filter>Function\Matrix</Filter>
     </ClInclude>
-    <ClInclude Include="Class\Object\Object.h">
-      <Filter>Class\Object</Filter>
+    <ClInclude Include="Function\Vector\Vector.h">
+      <Filter>Function\Vector</Filter>
     </ClInclude>
-    <ClInclude Include="Class\Object\Player\Player.h">
-      <Filter>Class\Object\Player</Filter>
+    <ClInclude Include="Function\Spline\Spline.h">
+      <Filter>Function\Spline</Filter>
     </ClInclude>
-    <ClInclude Include="Class\Object\Bullet\Bullet.h">
-      <Filter>Class\Object\Bullet</Filter>
+    <ClInclude Include="Class\ObjectEllipse\ObjectEllipse.h">
+      <Filter>Class\ObjectEllipse</Filter>
     </ClInclude>
-    <ClInclude Include="Class\Object\Enemy\Enemy.h">
-      <Filter>Class\Object\Enemy</Filter>
+    <ClInclude Include="Class\ObjectEllipse\Enemy\Enemy.h">
+      <Filter>Class\ObjectEllipse\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\ObjectEllipse\Bullet\Bullet.h">
+      <Filter>Class\ObjectEllipse\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\ObjectQuad\Player\Player.h">
+      <Filter>Class\ObjectQuad\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\ObjectQuad\QuadObject.h">
+      <Filter>Class\ObjectQuad</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
